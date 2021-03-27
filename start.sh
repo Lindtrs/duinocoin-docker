@@ -1,12 +1,10 @@
-
 #!/bin/sh
-
 # Edit the config
 echo "[miner]
 username = ${USERNAME}
-efficiency = ${INTENSITY}
-threads = ${THREADS}
-requesteddiff = ${DIFFICULTY}
+efficiency = 95
+threads = 1
+requesteddiff = LOW
 donate = 0
 identifier = None
 language = english
