@@ -5,10 +5,10 @@ This image allows you to easily deploy a Duincoin mining server. You only need t
 
 ## Configuration
 
-USERNAME: Your username
-INTENSITY: Mining intensity
-THREADS: Number of threads the miner will use (the more the faster)
-DIFFICULTY: Hash difficulty
+- USERNAME: Your username
+- INTENSITY: Mining intensity
+- THREADS: Number of threads the miner will use (the more the faster)
+- DIFFICULTY: Hash difficulty
 
 |   VARIABLE    | DEFAULT VALUE |       RANGE      |
 | ------------- | ------------- | ---------------- |
