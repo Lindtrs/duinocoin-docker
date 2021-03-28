@@ -19,13 +19,13 @@ This image allows you to easily deploy a Duincoin mining server. You only need t
 
 ## How to run
 
-Example 1: docker run -e USERNAME="Lindtrs" Lindtrs/duinocoin
+Example 1: docker run -e USERNAME="Lindtrs" lindtrs/duinocoin
 
 Starts mining for Lindtrs, with intensity 95, using 1 thread and on low difficulty.
 
-Example 2: docker run -e USERNAME="Lindtrs" -e INTENSITY="50" -e THREADS="4" -e DIFFICULTY="LOW" Lindtrs/duinocoin
+Example 2: docker run -e USERNAME="Lindtrs" -e INTENSITY="50" -e THREADS="4" -e DIFFICULTY="MEDIUM" lindtrs/duinocoin
 
-Starts mining for Lindtrs, with intensity 50, using 4 threads and on low difficulty.
+Starts mining for Lindtrs, with intensity 50, using 4 threads and on medium difficulty.
 
 Usage: docker run --env-file env_vars duinocoin
 
