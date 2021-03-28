@@ -21,7 +21,7 @@ WORKDIR /
 
 # Copy start up script
 COPY start.sh .
-RUN chmod +x start.sh
+#RUN chmod +x start.sh
 
 # Fixes a file format error when the image is built on Windows, uploaded to Github and then ran.
 RUN apt-get install dos2unix sudo -y
