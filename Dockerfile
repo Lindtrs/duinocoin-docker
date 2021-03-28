@@ -23,7 +23,7 @@ WORKDIR /
 COPY start.sh .
 
 # Fixes a file format error when the image is built on Windows, uploaded to Github and then ran.
-RUN apt-get install dos2unix
+RUN apt-get install dos2unix sudo
 RUN dos2unix start.sh 
 
-CMD ["./start.sh"]
+CMD ["sudo ./start.sh"]
