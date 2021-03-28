@@ -10,6 +10,14 @@ INTENSITY: Mining intensity
 THREADS: Number of threads the miner will use (the more the faster)
 DIFFICULTY: Hash difficulty
 
+|   VARIABLE    | DEFAULT VALUE |       RANGE      |
+| ------------- | ------------- | ---------------- |
+|   USERNAME    |               |                  |
+|   INTENSITY   |      95       |       1-100      |
+|    THREADS    |       1       |                  |
+|   DIFFICULTY  |      LOW      | LOW, MEDIUM, NET |
+
+
   VARIABLE  | DEFAULT VALUE |     RANGE  
 ------------+---------------+-----------------
   USERNAME  |               |  
