@@ -12,10 +12,11 @@ ENV DIFFICULTY "LOW"
 RUN mkdir PCMiner_2.3_resources
 RUN apt-get update
 RUN apt-get install wget --yes
+#RUN wget https://raw.githubusercontent.com/revoxhere/duino-coin/master/PC_Miner.py
+COPY PC_Miner.py .
 WORKDIR PCMiner_2.3_resources
 RUN wget https://raw.githubusercontent.com/revoxhere/duino-coin/master/Resources/PC_Miner_langs.json
 WORKDIR /
-RUN wget https://raw.githubusercontent.com/revoxhere/duino-coin/master/PC_Miner.py
 
 # Copy start up script
 COPY start.sh .
