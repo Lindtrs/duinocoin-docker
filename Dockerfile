@@ -26,4 +26,4 @@ COPY start.sh .
 RUN apt-get install dos2unix sudo -y
 RUN dos2unix start.sh 
 
-CMD ["sudo ./start.sh"]
+CMD ["./start.sh"]
