@@ -17,17 +17,6 @@ DIFFICULTY: Hash difficulty
 |    THREADS    |       1       |                  |
 |   DIFFICULTY  |      LOW      | LOW, MEDIUM, NET |
 
-
-  VARIABLE  | DEFAULT VALUE |     RANGE  
-------------+---------------+-----------------
-  USERNAME  |               |  
-------------+---------------+-----------------
-  INTENSITY | 95            | 0-100
-------------+---------------+-----------------
-  THREADS   | 1             | 
-------------+---------------+-----------------
- DIFFICULTY | LOW           | LOW, MEDIUM, NET
-
 ## How to run
 
 Example 1: docker run -e USERNAME="Lindtrs" Lindtrs/duinocoin
