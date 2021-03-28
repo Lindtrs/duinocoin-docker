@@ -8,18 +8,20 @@ ENV INTENSITY "95"
 ENV THREADS "1"
 ENV DIFFICULTY "LOW"
 
-# Setup the config files for the miner
+# Download and setup miner
 RUN mkdir PCMiner_2.3_resources
-COPY PCMiner_2.3_resources/langs.json PCMiner_2.3_resources/.
-
-# Download the official miner
 RUN apt-get update
 RUN apt-get install wget --yes
+WORKDIR PCMiner_2.3_resources
+RUN wget https://raw.githubusercontent.com/revoxhere/duino-coin/master/Resources/PC_Miner_langs.json
+WORKDIR /
 RUN wget https://raw.githubusercontent.com/revoxhere/duino-coin/master/PC_Miner.py
-RUN chmod +x PC_Miner.py
 
 # Copy start up script
 COPY start.sh .
-RUN chmod +x start.sh
+
+# Fixes a file format error when the image is built on Windows, uploaded to Github and then ran.
+RUN apt-get install dos2unix
+RUN dos2unix start.sh 
 
 CMD ["./start.sh"]

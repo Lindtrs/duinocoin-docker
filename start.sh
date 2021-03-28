@@ -2,9 +2,9 @@
 # Edit the config
 echo "[miner]
 username = ${USERNAME}
-efficiency = 95
-threads = 1
-requesteddiff = LOW
+efficiency = ${INTENSITY}
+threads = ${THREADS}
+requesteddiff = ${DIFFICULTY}
 donate = 0
 identifier = None
 language = english
