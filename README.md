@@ -32,6 +32,6 @@ Starts mining for Lindtrs, with intensity 50, using 4 threads and on low difficu
 
 Usage: docker run --env-file env_vars duinocoin
 
-Starts mining with the variables set in env_vars file
+Starts mining with the variables set in env_vars file.
 
 
