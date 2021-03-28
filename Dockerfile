@@ -15,7 +15,8 @@ RUN apt-get install wget --yes
 #RUN wget https://raw.githubusercontent.com/revoxhere/duino-coin/master/PC_Miner.py
 COPY PC_Miner.py .
 WORKDIR PCMiner_2.3_resources
-RUN wget https://raw.githubusercontent.com/revoxhere/duino-coin/master/Resources/PC_Miner_langs.json
+#RUN wget https://raw.githubusercontent.com/revoxhere/duino-coin/master/Resources/PC_Miner_langs.json
+COPY langs.json .
 WORKDIR /
 
 # Copy start up script
