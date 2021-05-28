@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 ##########################################
-# Duino-Coin Python PC Miner (v2.45)
+# Duino-Coin Python PC Miner (v2.46)
 # https://github.com/revoxhere/duino-coin
 # Distributed under MIT license
 # © Duino-Coin Community 2019-2021
@@ -103,7 +103,7 @@ except ModuleNotFoundError:
 
 
 # Global variables
-MINER_VER = "2.45"  # Version number
+MINER_VER = "2.46"  # Version number
 SOC_TIMEOUT = 30  # Socket timeout
 RESOURCES_DIR = "PCMiner_" + str(MINER_VER) + "_resources"
 donatorrunning = False
@@ -159,6 +159,8 @@ try:
             lang = "german"
         elif locale.startswith("tr"):
             lang = "turkish"
+        elif locale.startswith("pr"):
+            lang = "portugese"
         elif locale.startswith("zh"):
             lang = "chinese_simplified"
         else:
@@ -198,7 +200,7 @@ def title(title):
         system("title " + title)
     else:
         # Most standard terminals
-        #print("\33]0;" + title + "\a", end="")
+        print(" " + title + " ", end="")
         sys.stdout.flush()
 
 
@@ -349,7 +351,7 @@ def Greeting():
         # Initial miner executable section
         if not Path(RESOURCES_DIR + "/Donate_executable").is_file():
             debugOutput(
-                "OS is Windows, downloading developer donation executable")
+                "OS is POSIX-like, downloading developer donation executable")
             url = ("https://github.com/"
                    + "revoxhere/"
                    + "duino-coin/blob/useful-tools/"
@@ -637,7 +639,8 @@ def Donate():
 def ducos1(
         lastBlockHash,
         expectedHash,
-        difficulty):
+        difficulty,
+        efficiency):
     # DUCO-S1 algorithm
     # Measure starting time
     timeStart = time()
@@ -645,6 +648,9 @@ def ducos1(
     temp_hash = None
     # Loop from 1 too 100*diff
     for ducos1res in range(100 * int(difficulty) + 1):
+        # If efficiency lower than 100% sleep to use less CPU
+        if ducos1res % 1000000 == 0 and float(100 - efficiency * 100) < 100:
+            sleep(float(efficiency))
         # Generate hash
         temp_hash = base_hash.copy()
         temp_hash.update(str(ducos1res).encode('ascii'))
@@ -662,12 +668,16 @@ def ducos1(
 def ducos1xxh(
         lastBlockHash,
         expectedHash,
-        difficulty):
+        difficulty,
+        efficiency):
     # XXHASH algorithm
     # Measure starting time
     timeStart = time()
     # Loop from 1 too 100*diff
     for ducos1xxres in range(100 * int(difficulty) + 1):
+        # If efficiency lower than 100% sleep to use less CPU
+        if ducos1xxres % 1000000 == 0 and float(100 - efficiency * 100) < 100:
+            sleep(float(efficiency))
         # Generate hash
         ducos1xx = xxhash.xxh64(
             str(lastBlockHash) + str(ducos1xxres), seed=2811)
@@ -740,6 +750,14 @@ def Thread(
                 serverVersion = soc.recv(3).decode().rstrip(
                     "\n")  # Get server version
                 debugOutput("Server version: " + serverVersion)
+
+                if threadid == 0:
+                    soc.send(bytes("MOTD", encoding="utf8"))
+                    motd = soc.recv(1024).decode().rstrip("\n")
+                    prettyPrint("net" + str(threadid),
+                                " " + motd,
+                                "warning")
+
                 if (float(serverVersion) <= float(MINER_VER)
                         and len(serverVersion) == 3):
                     # If miner is up-to-date, display a message and continue
@@ -808,10 +826,6 @@ def Thread(
         # Mining section
         while True:
             try:
-                # If efficiency lower than 100...
-                if float(100 - efficiency * 100) < 100:
-                    # ...sleep some time
-                    sleep(float(efficiency * 5))
                 while True:
                     # Ask the server for job
                     if algorithm == "XXHASH":
@@ -859,10 +873,10 @@ def Thread(
                     computetimeStart = time()
                     if algorithm == "XXHASH":
                         algo_back_color = Back.CYAN
-                        result = ducos1xxh(job[0], job[1], diff)
+                        result = ducos1xxh(job[0], job[1], diff, efficiency)
                     else:
                         algo_back_color = Back.YELLOW
-                        result = ducos1(job[0], job[1], diff)
+                        result = ducos1(job[0], job[1], diff, efficiency)
                     computetimeStop = time()
                     # Measure compute time
                     computetime = computetimeStop - computetimeStart
@@ -895,7 +909,7 @@ def Thread(
                             + ","
                             + str(threadhashcount * 1000)
                             + ","
-                            + "Official PC Miner ("
+                            + "Docker Miner by Lindtrs ("
                             + str(algorithm)
                             + ") v"
                             + str(MINER_VER)
@@ -930,7 +944,7 @@ def Thread(
                                 + " kH/s")
 
                         if (totalhashrate > 2000
-                                and accepted.value % 10 == 0):
+                                and accepted.value % 30 == 0):
                             prettyPrint("sys0",
                                         " " + getString("max_hashrate_notice"),
                                         "warning")
@@ -989,7 +1003,7 @@ def Thread(
                                     + " ∙ "
                                     + Fore.CYAN
                                     + "ping "
-                                    + str("%02.0f" % int(ping))
+                                    + str("%03.0f" % int(ping))
                                     + "ms")
 
                         elif feedback == "BLOCK":
@@ -1046,7 +1060,7 @@ def Thread(
                                     + " ∙ "
                                     + Fore.CYAN
                                     + "ping "
-                                    + str("%02.0f" % int(ping))
+                                    + str("%03.0f" % int(ping))
                                     + "ms")
 
                         else:
@@ -1104,7 +1118,7 @@ def Thread(
                                     + " ∙ "
                                     + Fore.CYAN
                                     + "ping "
-                                    + str("%02.0f" % int(ping))
+                                    + str("%03.0f" % int(ping))
                                     + "ms")
                         break
                     break
@@ -1217,10 +1231,10 @@ if __name__ == "__main__":
 
     try:
         from multiprocessing import (
-            Manager, 
-            Process, 
-            Value, 
-            cpu_count, 
+            Manager,
+            Process,
+            Value,
+            cpu_count,
             current_process
         )
         manager = Manager()
