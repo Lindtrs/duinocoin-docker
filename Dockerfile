@@ -3,11 +3,7 @@ FROM python:3.9-slim
 WORKDIR /
 USER root
 
-<<<<<<< HEAD
-ENV USERNAME "Lindtrss"
-=======
 ENV USERNAME "Lindtrs"
->>>>>>> main
 ENV INTENSITY "95"
 ENV THREADS "1"
 ENV DIFFICULTY "LOW"
