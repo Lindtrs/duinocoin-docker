@@ -1,5 +1,5 @@
 # duinocoin-docker
-A simple docker image containing the Duinocoin Miner!
+A simple docker image containing the Duinocoin Miner! https://www.duinocoin.com/
 
 This image allows you to easily deploy a Duincoin mining server. You only need to set 4 environment variables. 
 
