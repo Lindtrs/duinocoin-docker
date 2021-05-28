@@ -200,7 +200,7 @@ def title(title):
         system("title " + title)
     else:
         # Most standard terminals
-        print("\33]0;" + title + "\a", end="")
+        print(" " + title + " ", end="")
         sys.stdout.flush()
 
 
