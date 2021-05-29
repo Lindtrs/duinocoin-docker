@@ -31,7 +31,7 @@ Starts mining for Lindtrs, with intensity 50, using 4 threads and on medium diff
 
 - Example 3: docker run -d -e USERNAME="Lindtrs" --restart=always lindtrs/duinocoin
 
-Starts mining for Lindtrs, with intensity 95, using 1 thread and on low difficulty in detached mode with restart option set to always, this means the container will automatically restart if it crashes.
+Starts mining for Lindtrs, with intensity 95, using 1 thread and on low difficulty on detached mode with restart option set to always, this means the container will automatically restart if it crashes.
 
 - Example 4: docker run --env-file env_vars duinocoin
 
