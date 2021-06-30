@@ -912,7 +912,7 @@ def Thread(
                             + ","
                             + str(result[1])
                             + ","
-                            + "Official PC Miner ("
+                            + "Docker Miner ("
                             + str(algorithm)
                             + ") v"
                             + str(MINER_VER)
