@@ -75,7 +75,27 @@
         "max_threads_notice": "Mining Duino-Coin with a lot of threads will cause decrease in profit - mining threads decreased to 8",
         "max_hashrate_notice": "Mining Duino-Coin with powerful equipment may not be very profitable for you - we suggest trying Coin Magi (https://xmg.network) - our 'sister' coin",
     
-        "recommended": "recommended"
+        "recommended": "recommended",
+        "connection_search": "Searching for the fastest node to connect to",
+
+        "connecting_node": " Retrieved mining node: ",
+
+        "uptime_seconds": " seconds",
+        "uptime_minute": " minute",
+        "uptime_minutes": " minutes",
+        "uptime_hour": " hour",
+        "uptime_hours": " hours",
+
+        "periodic_mining_report": "Periodic mining report (BETA): ",
+        "report_period": "\n\t\t‖ During the last ",
+        "report_time": " seconds",
+        "report_body1": "\n\t\t‖ You've mined ",
+        "report_body2": " shares (",
+        "report_body3": " shares/s)",
+        "report_body4": "\n\t\t‖ With the hashrate of ",
+        "report_body5": "\n\t\t‖ In this time period, you've solved ",
+        "report_body6": " hashes",
+        "total_mining_time": "\n\t\t‖ Total miner uptime: "
     },
     "italian": {
         "translation_autor": "Il mastro Stefanuzzo (no spaces on GitHub)",
@@ -232,7 +252,24 @@
         "max_threads_notice": "Kopanie Duino-Coin z wysoką ilością wątków spowoduje spadek w zyskach - zmniejszono liczbę wątków do 8",
         "max_hashrate_notice": "Kopanie Duino-Coin używając mocnego komputera może nie być bardzo opłacalne - proponujemy wpróbować Coin Magi (https://xmg.network) - naszą 'siostrzaną' monetę",
     
-        "recommended": "zalecany"
+        "recommended": "zalecana opcja",
+        "connection_search": "Szukanie najszybszego serwera",
+
+        "uptime_seconds": " sekund",
+        "uptime_minute": " minutę",
+        "uptime_minutes": " minuty",
+        "uptime_hour": " godziny",
+        "uptime_hours": " godzin",
+        "periodic_mining_report": "Statystyki kopania (BETA): ",
+        "report_period": "\n\t\t‖ W czasie ",
+        "report_time": " sekund",
+        "report_body1": "\n\t\t‖ Wykopałeś ",
+        "report_body2": " share'ów (",
+        "report_body3": " share'ów/s)",
+        "report_body4": "\n\t\t‖ Z szybkością ",
+        "report_body5": "\n\t\t‖ Podczas tego czasu rozwiązałeś ",
+        "report_body6": " hashy",
+        "total_mining_time": "\n\t\t‖ Koparka działa przez: "
     },
     "spanish": {
         "translation_autor": "HGEpro",
@@ -378,7 +415,9 @@
 
         "mining_user": " L'utilisateur ",
         "mining_not_exist": " n'existe pas.",
-        "mining_not_exist_warning": " Vérifiez que vous avez correctement entré votre nom d'utilisateur dans le fichier de configuration. Nouvel essai dans 10s"
+        "mining_not_exist_warning": " Vérifiez que vous avez correctement entré votre nom d'utilisateur dans le fichier de configuration. Nouvel essai dans 10s",
+
+        "connection_search": "Recherche du serveur le plus rapide"
     },
     "russian": {
         "translation_autor": "5Q",
@@ -522,7 +561,9 @@
 
         "mining_user": " Benutzer ",
         "mining_not_exist": " existiert nicht.",
-        "mining_not_exist_warning": " Stelle sicher, dass du den Nutzernamen korrekt geschrieben hast. Überprüfe deine Konfigurationsdatei. Neuversuch in 10s"
+        "mining_not_exist_warning": " Stelle sicher, dass du den Nutzernamen korrekt geschrieben hast. Überprüfe deine Konfigurationsdatei. Neuversuch in 10s",
+
+        "connection_search": "Suche nach der schnellsten Verbindung zu dem Server"
     },
     "chinese_simplified": {
         "translation_autor": "suifengtec",
@@ -660,10 +701,12 @@
 
         "mining_user": " Kullanıcı ",   
         "mining_not_exist": " mevcut değil.",   
-        "mining_not_exist_warning": " Kullanıcı adınızı doğru girdiğinizden emin olun. Lütfen ayar dosyanızı kontrol edin. 10 saniye içerisinde yeniden deneniyor"
+        "mining_not_exist_warning": " Kullanıcı adınızı doğru girdiğinizden emin olun. Lütfen ayar dosyanızı kontrol edin. 10 saniye içerisinde yeniden deneniyor",
+        
+        "connection_search": "Sunuculara bağlanmak için en hızlı bağlantı aranıyor"
     },
     "portuguese": {
-        "translation_autor": "bonsai",
+        "translation_autor": "bonsai e gsrbr",
         "sigint_detected": " SIGINT detectado - Saindo corretamente.",
         "goodbye": " Até!",
         "greeting_morning": "Bom dia",
@@ -733,7 +776,33 @@
 
         "mining_user": " User ",
         "mining_not_exist": " não existe",
-        "mining_not_exist_warning": " Usuario incorreto, confira-o. Tentando novamente em 10s"
+        "mining_not_exist_warning": " Usuario incorreto, confira-o. Tentando novamente em 10s",
+
+        "max_threads_notice": "Minerar Duino-Coin com muitos núcleos(threads) causará queda na produtividade(lucro) - núcleos de mineração reduzido para 8",
+        "max_hashrate_notice": "Minerar Duino-Coin com equipamentos poderosos pode não ser muito lucrativo para você - sugerimos tentar a Coin Magi (https://xmg.network) - ou 'sister' coin",
+
+        "recommended": "recomendado",
+        "connection_search": "Procurando o servidor/nó mais rápido para se conectar",
+
+        "connecting_node": " Conectando ao servidor/nó de mineração: ",
+
+        "uptime_seconds": " segundos",
+        "uptime_minute": " minuto",
+        "uptime_minutes": " minutos",
+        "uptime_hour": " hora",
+        "uptime_hours": " horas",
+
+
+        "periodic_mining_report": "Relatório de mineração periódica (BETA): ",
+        "report_period": "\n\t\t‖ Durante os últimos ",
+        "report_time": " segundos",
+        "report_body1": "\n\t\t‖ Você minerou ",
+        "report_body2": " shares (",
+        "report_body3": " shares/s)",
+        "report_body4": "\n\t\t‖ Com o hashrate de ",
+        "report_body5": "\n\t\t‖ Neste período de tempo, você resolveu ",
+        "report_body6": " hashes",
+        "total_mining_time": "\n\t\t‖ Tempo de atividade total do minerador: "
     },
     "maltese": {
         "translation_autor": "IdotMaster1/MattyInnit",
@@ -803,5 +872,103 @@
 
         "load_config_error": "Problema bit-tagħbija tal-fajl tal-konfigurazzjoni (",
         "load_config_error_warning": "/Miner_config.cfg). Ipprova neħħih u erġa 'ibda l-iskavatur. Agħlaq f'10 sekondi" 
+    },
+    "thai": {
+        "translation_autor": "naphob",
+        "sigint_detected": " ตรวจพบ SIGINT - จบการใช้งานอย่่างปลอดภัย",
+        "goodbye": " แล้วพบกันใหม่",
+        "greeting_morning": "อรุณสวัสดิ์",
+        "greeting_noon": "ขอให้มีช่วงเที่ยงที่มีรสชาติ",
+        "greeting_afternoon": "ขอให้มีบ่ายที่แสนสงบ",
+        "greeting_evening": "ขอให้มีช่วงเย็นที่แสนอบอุ่น",
+        "greeting_back": "ยินดีต้อนรับกลับมา",
+
+        "banner": "Duino-Coin อย่างเป็นทางการ © ไพธอน มายเนอร์",
+        "donation_level": "ระดับการบริจาคให้นักพัฒนา: ",
+
+        "ask_algorithm": "เลือกอัลกอริทึมการขุดที่คุณต้องการใข้ (1-2): ",
+        "ask_difficulty": "เลือกระดับความยากของการขุดที่คุณต้องการใช้ (1-3): ",
+        "low_diff": "ความยากต่ำ (สำหรับราสเบอร์รี่ ไพส์, คอมพิวเตอร์เก่า)",
+        "medium_diff": "ความยากปานกลาง(สำหรับคอมพิวเตอร์ทั่วไป)",
+        "net_diff": "ความยากระดับเครือข่าย (สำหรับคอมพิวเตอร์ที่มีความแรงสูง)",
+
+        "low_diff_short": "ความยากต่ำ",
+        "medium_diff_short": "ความยากกลาง",
+        "net_diff_short": "ความยากเครือข่าย",
+        "algorithm": "อัลกอริทึม: ",
+        "rig_identifier": "ชื่อริก: ",
+
+        "basic_config_tool": "\nDuino-Coin เครื่องมือการตั้งค่าพื้นฐาน\nแก้ไข ",
+        "edit_config_file_warning": "ไฟล์ /Miner_config.cfg ภายหลังหากคุณต้องการเปลี่ยนแปลง",
+        "dont_have_account": "ยังไม่มีบัญชี Duino-Coin? ใช้ ",
+        "wallet": "วอลเล็ท",
+        "register_warning": " เพื่อลงทะเบียนบนเซิร์ฟเวอร์\n",
+        "ask_username": "ใส่ชื่อผู้ใช้ Duino-Coin: ",
+        "ask_intensity": "ตั้งค่าความแรงในการขุดS (1-100)% (แนะนำ: 95): ",
+        "ask_threads": "ตั้งค่าเธรดการขุด (แนะนำสำหรับระบบของคุณ: ",
+        "ask_lower_difficulty": "คุณต้องการใช้ความยากที่ต่ำลงสำหรับการขุด (สำหรับระบบที่ช้า)? (y/N): ",
+        "ask_rig_identifier": "คุณต้องการเพิ่มตัวชี้ (ชื่อ) กับริกนี้? (y/N): ",
+        "ask_rig_name": "ใส่ชื่อริกที่ต้องการ: ",
+        "ask_donation_level": "ตั้งค่าระดับการบริจาคให้นักพัฒนา (0-5) (แนะนำ: 1), รายได้ของคุณจะไม่ลดลง: ",
+        "config_saved": "การตั้งค่าถูกบันทึกแล้ว! ไมเนอร์เริ่มทำงาน",
+        "load_config_error": " ความผิดพลาดในการถ่ายโอนไฟล์ตั้งค่า (",
+        "load_config_error_warning": "/Miner_config.cfg) ลองเอามันออกและเริ่มการตั้งค่าใหม่ จะออกใน 10วิ",
+
+        "free_network_warning": " เครือข่าย Duino-Coin เป็นบริการฟรีทั้งหมดและจะเป็นตลอดไป",
+        "donate_warning": "\nเราไม่ได้ค่าธรรมเนียมจากการขุดของคุณ\nคุณสามารถช่วยพวกเราดูแลเซิร์ฟเวอร์และลดค่าธรรมเนียมการแลกเปลี่ยนด้่วยการบริจาค\nเยี่ยมขม ",
+        "learn_more_donate": " เรียนรู้เพิ่มเติมว่าคุณจะช่วยอย่างไร:)",
+        "starting_donation": "เริ่มขั้นตอนการบริจาค",
+        "thanks_donation": " ขอบคุณที่เป็นผู้บริจาคที่สุดยอด ❤️ \nการบริจาคของคุณจะช่วยพวกเราดูแลเซิร์ฟเวอร์และการพัฒนาต่อไปข้างหน้า",
+
+        "data_error": " ความผิดพลาดในการรับข้อมูลจาก GitHub! ลองใหม่ใน 10วิ",
+        "connected": " เชื่อมต่อแล้ว",
+        "connected_server": " ไปยังมาสเตอร์เซิร์ฟเวอร์ Duino-Coin (v",
+        "outdated_miner": " มายเนอร์ตกรุ่น (v",
+        "server_is_on_version": " เซิร์ฟเวอร์ v",
+        "update_warning": ", กรุณาดาวน์โหลดเวอร์ชั้นล่าสุดจาก https://github.com/revoxhere/duino-coin/releases/",
+        "connecting_error": " ความผิดพลาดในการเชื่อมต่อเซิร์ฟเวอร์ ลองใหม่ใน 10วิ",
+        "mining_thread": " เธรดการขุด #",
+        "mining_thread_starting": " กำลังเริ่มต้น",
+        "using_algo": " ใช้อัลกอริทึม DUCO-S1 กับ ",
+        "using_algo_xxh": " ใช้อัลกอริทึม XXHASH กับ ",
+        "efficiency": "ประสิทธิภาพ",
+
+        "duco_python_miner": "Duino-Coin ไพธอน มายเนอร์ (v",
+        "accepted_shares": " ยอมรับส่วนแบ่ง",
+        "accepted": " ยอมรับแล้ว ",
+        "block_found": " ค้นพบบล็อกแล้ว ",
+        "internal_server_error": " ความผิดพลาดภายในเซิร์ฟเวอร์",
+        "retrying": " ลองใหม่ใน 10วิ",
+        "rejected": " ปฏิเสธ ",
+        "error_while_mining": " ความผิดพลาดระหว่างขุด - เหมือนจะเป็นความผิดพลาดในการเชื่อมต่อ - เริ่มใหม่ใน 5วิ",
+
+        "mining_user": " ผู้ใช้ ",
+        "mining_not_exist": " ไม่มีอยู่",
+        "mining_not_exist_warning": " ตรวจสอบความถูกต้องของชื่อผู้ใช้งาน กรุณาตรวจสอบไฟล์การตั้งค่า ลองใหม่ใน 10วิ",
+
+        "max_threads_notice": "การขุด Duino-Coin ด้วยเธรดจำนวนมากจะทำให้กำไรลดลง - เธรดการขุดลดเหลือ 8",
+        "max_hashrate_notice": "การขุด Duino-Coin ด้วยอุปกรณ์ที่มีพลังสูงอาจจะไม่ได้ทำให้คุณได้กำไรสูงสุด- เราแนะนำให้ลอง Magi (https://xmg.network) - เหรียญ 'พี่น้อง' ของเรา",
+
+        "recommended": "แนะนำ",
+        "connection_search": "กำลังค้นหาโนดที่เร็วที่สุดเพื่อเชื่อมต่อ",
+
+        "connecting_node": " โนดการขุดที่เชื่อมต่อ: ",
+
+        "uptime_seconds": "วินาที",
+        "uptime_minute": " นาที",
+        "uptime_minutes": " นาที",
+        "uptime_hour": " ชั่วโมง",
+        "uptime_hours": " ชั่วโมง",
+
+        "periodic_mining_report": "รายงานการขุดเป็นระยะ (เบต้า): ",
+        "report_period": "\n\t\t‖ ในช่วง ",
+        "report_time": " วินาทีที่ผ่านมา",
+        "report_body1": "\n\t\t‖ คุณขุดไป ",
+        "report_body2": " ส่วนแบ่ง (",
+        "report_body3": " ส่วนแบ่ง/วิ)",
+        "report_body4": "\n\t\t‖ ด้วยแฮชเรท ",
+        "report_body5": "\n\t\t‖ ในช่วงเวลานี้, คุณได้แก้ไป ",
+        "report_body6": " แฮช",
+        "total_mining_time": "\n\t\t‖ เวลาที่ตัวขุดทำงานทั้งหมด: "
     }
 }
