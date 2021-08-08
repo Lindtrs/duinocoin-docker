@@ -25,9 +25,9 @@ COPY start.sh .
 # Fix permissions so the file can be executed
 RUN chmod +x start.sh
 
-# Fixes a file format error when the image is built on Windows, uploaded to GitHub/Docker Hub and then ran.
+# Fixes a file format error when the image is built on Windows, uploaded to Docker Hub/GitHub and then ran.
 RUN apt-get install dos2unix sudo -y
 RUN dos2unix start.sh 
 
-# RUN START UP SCRIPT
+# Run start up script
 CMD ["./start.sh"]
