@@ -9,6 +9,7 @@ This image allows you to easily deploy a Duincoin miner with very little effort.
 - INTENSITY: Mining intensity
 - THREADS: Number of threads the miner will use (the more the faster)
 - DIFFICULTY: Hash difficulty
+- RIG: Rig Identifier (name of the rig)
 
 |   VARIABLE    | DEFAULT VALUE |       RANGE      |
 | ------------- | ------------- | ---------------- |
@@ -30,7 +31,7 @@ Starts mining for Lindtrs, with intensity 95, using 1 thread and on low difficul
 
 - Example 3: docker run -e USERNAME="Lindtrs" -e INTENSITY="50" -e THREADS="4" -e DIFFICULTY="MEDIUM" -e RIG="MyDockerRig" --restart=always lindtrs/duinocoin
 
-Starts mining for Lindtrs, with intensity 50, using 4 threads, on medium difficulty and with "MyDockerRig" as RIG identifier. When restart option is set to always, this means the container will automatically restart if it crashes.
+Starts mining for Lindtrs, with intensity 50, using 4 threads, on medium difficulty and with "MyDockerRig" as Rig identifier. When restart option is set to always, this means the container will automatically restart if it crashes.
 
 - Example 4: docker run --env-file env_vars --restart=always lindtrs/duinocoin
 
